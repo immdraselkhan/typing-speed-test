@@ -16,6 +16,17 @@ body {
   margin: 0 auto;
 }
 
+.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.breadcrumb>li>a {
+  color: #eb6565;
+  text-decoration: none;
+}
+
 #question {
   height: 100px;
   display: flex;
@@ -32,6 +43,7 @@ body {
   );
   backdrop-filter: blur(5px);
   margin-bottom: 30px;
+  padding: 20px;
 }
 
 #display {
@@ -145,6 +157,7 @@ button {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 25px;
+  margin-bottom: 25px;
 }
 
 .card {
@@ -219,4 +232,77 @@ button {
   .card {
     flex-direction: column;
   }
+}
+
+/* FAQ */
+
+.content {
+  width: 80%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+/*Question*/
+.question {
+  position: relative;
+  background: #9dffad;
+  margin: 0;
+  padding: 10px 10px 10px 50px;
+  display: block;
+  width:100%;
+  cursor: pointer;
+}
+/*Answer*/
+.answers {
+  padding: 0px 15px;
+  margin: 5px 0;
+  width:100%!important;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  position: relative;
+  opacity: 0;
+  background: #f9f9f9;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.questions:checked ~ .answers{
+  height: auto;
+  opacity: 1;
+  padding: 15px;
+  
+}
+
+/*FAQ Toggle*/
+.plus {
+  position: absolute;
+  margin-left: 10px;
+  z-index: 5;
+  font-size: 2em;
+  line-height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease;
+
+}
+
+.questions:checked ~ .plus {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+
+}
+
+.questions {
+  display: none;
 }

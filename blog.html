@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <h1 class="title">Blog</h1>
+    <ol class="breadcrumb">
+        <li><a href="index.html">⏪ Home</a></li>
+    </ol>
+    <div class="box-container">
+        <div class="content">
+            <div>
+                <input type="checkbox" id="question1" name="q" class="questions">
+                <div class="plus">+</div>
+                <label for="question1" class="question">What are the differences between local storage & session storage?</label>
+                <div class="answers">localStorage and sessionStorage are almost the same. Both have the following rules:<br><br>
+                    They store key/value pairs for a particular domain.<br>
+                    The values stored may only be strings.<br>
+                    They have a limit of around 5MB of storage space.<br>
+                    The one major difference between localStorage and sessionStorage is the expiration date.<br><br>
+                    localStorage persists the storage across browser sessions. So even if the domain is opened in a new tab, or the browser is closed and reopened, the storage is saved. There is no expiration.<br><br>
+                    sessionStorage is cleared when the page session ends. A page session lasts as long as the tab or the browser is open. Therefore, when you open a new tab or a new window, this creates a new session and new storage.</div>
+            </div>
+            <div>
+                <input type="checkbox" id="question2" name="q" class="questions">
+                <div class="plus">+</div>
+                <label for="question2" class="question">What are the differences between global scope & local scope?</label>
+                <div class="answers">There are two types of scope in JavaScript. These are:<br><br>
+                    Global scope — Global scope contains all of the things defined outside of all code blocks. A code block simply consists of grouped statements inside curly braces ({ }). if statement, loops, function are examples of structure that create a code block. A global variable has global scope. A global variable is accessible from anywhere in the code.<br><br>
+                    Local Scope — Local scope contains things defined inside code blocks. A local variable has local scope. A local variable is only accessible where it's declared.</div>
+            </div>
+            <div>
+                <input type="checkbox" id="question3" name="q" class="questions">
+                <div class="plus">+</div>
+                <label for="question3" class="question">How does the Event Loop works in JavaScript?</label>
+                <div class="answers">The event loop is an architectural design pattern that allows code to run asynchronously on the javascript engines and makes it possible for code to execute blocking instructions first and when available execute asynchronous functions.<br><br>
+                    The event loop utilizes three major components, Call Stack, Event Queue, and WebAPIs/C++ APIs. It manages function calls in a way that asynchronous events would go into the event queue and will be called only after the call stack is</empty><br><br>
+                    Call stack holds all the synchronous function calls. Call stack will execute code in a last in first out approach. So last the most inner nested code will be executed first and then one level above that and so on. If the function call is asynchronous it will add a new call entry on WebAPIs and the API will add a new call to the callback queue after the asynchronous action is done.
+                    Now we have two stacks with functions to be executed. This is where the Event Loop comes in. Event Loop's job is to watch Callback Queue and Call Stack, whenever Call Stack is empty and we have called in Callback Queue. The event loop will move calls to Call Stack and execute them in succession.
+                    So to explain it in different terms, the event loop will wait until all blocking/synchronous code is done and then add asynchronous calls into the call stack. This simple architectural approach is what allows javascript to handle way more requests than the traditional multi-threaded synchronous approach.</div>
+            </div>
+            <div>
+                <input type="checkbox" id="question4" name="q" class="questions">
+                <div class="plus">+</div>
+                <label for="question4" class="question">How many ways we can get undefined?</label>
+                <div class="answers">8 ways to get undefine:<br><br>
+                    1. variable that is not initialized will give undefined.<br>
+                    2. function with no return.<br>
+                    3. parameter that is not passed will be undefined.<br>
+                    4. if return has nothing on the right side will return undefined.<br>
+                    5. property that doesn't exists on an object will give you undefined.<br>
+                    6. accessing array elements outside of the index range.<br>
+                    7. deleting an element inside an array.<br>
+                    8. set a value directly to undefined.</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -31,7 +31,7 @@ function displayHistory() {
     newRow.classList.add("card");
 
     newRow.innerHTML = `
-  <h3>${test.questionText}</h3>
+  <h3 style="margin-bottom: 10px">${test.questionText}</h3>
   <p>You took: <span class="bold">${parseInt(test.timeTaken)}</span> seconds</p>
     <p>You made: <span class="bold red">${test.errorCount}</span> mistakes</p>
     <p>Typing speed: <span class="bold green">${test.typeSpeed}</span> WPM</p>

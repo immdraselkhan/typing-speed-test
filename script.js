@@ -26,7 +26,7 @@ const typeController = (e) => {
   // Handle backspace press
   if (newLetter == "Backspace") {
     userText = userText.slice(0, userText.length - 1);
-    return display.removeChild(display.lastChild);
+    return !display.lastChild ? alert('Opps! Nothing to remove.') : display.removeChild(display.lastChild);
   }
 
   // these are the valid character we are allowing to type
@@ -86,7 +86,7 @@ const gameOver = typedEntries => {
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
     <p>You made: <span class="bold red">${errorCount}</span> mistakes</p>
-    <p style="margin-bottom: 5px">Typing speed: <span class="bold green">${typeSpeed}</span> WPM</p>
+    <p style="margin-bottom: 10px">Typing speed: <span class="bold green">${typeSpeed}</span> WPM</p>
     <button onclick="closeModal()">Close</button>
   `;
 
