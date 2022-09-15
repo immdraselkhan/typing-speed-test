@@ -160,6 +160,12 @@ button {
   margin-bottom: 25px;
 }
 
+@media only screen and (max-width: 700px) {
+  #histories {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .card {
   width: 100%;
   height: 100%;
@@ -180,33 +186,17 @@ button {
   grid-column: span 2;
 }
 
-.card:last-child:nth-child(3n - 1) {
-  grid-column-end: -2;
-}
-
-.card:nth-last-child(2):nth-child(3n + 1) {
-  grid-column-end: 4;
-}
-
-.card:last-child:nth-child(3n - 2) {
-  grid-column-end: 5;
-}
-
-@media only screen and (max-width: 700px) {
-  #histories {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
+@media only screen and (min-width: 700px) {
   .card:last-child:nth-child(3n - 1) {
-    grid-column-end: inherit;
+    grid-column-end: -2;
   }
   
   .card:nth-last-child(2):nth-child(3n + 1) {
-    grid-column-end: inherit;
+    grid-column-end: 4;
   }
   
   .card:last-child:nth-child(3n - 2) {
-    grid-column-end: inherit;
+    grid-column-end: 5;
   }
 }
 
@@ -234,15 +224,6 @@ button {
   }
 }
 
-/* FAQ */
-
-.content {
-  width: 80%;
-  padding: 0;
-  margin: 0 auto;
-}
-
-/*Question*/
 .question {
   position: relative;
   background: #9dffad;
@@ -252,7 +233,7 @@ button {
   width:100%;
   cursor: pointer;
 }
-/*Answer*/
+
 .answers {
   padding: 0px 15px;
   margin: 5px 0;
@@ -276,7 +257,6 @@ button {
   
 }
 
-/*FAQ Toggle*/
 .plus {
   position: absolute;
   margin-left: 10px;

@@ -64,15 +64,15 @@ const validate = (key) => {
 };
 
 // FINISHED TYPING
-const gameOver = typedEntries => {
+const gameOver = correctEntries => {
   document.removeEventListener("keydown", typeController);
   // the current time is the finish time
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
   const timeTaken = parseInt((finishTime - startTime) / 1000);
 
-  // Typing speed WPM
-  const typeSpeed = Math.round((typedEntries.length / 5) / (timeTaken * 0.0166667));
+  // Typing speed in WPM
+  const typeSpeed = Math.round((correctEntries.length / 5) / (timeTaken * 0.0166667));
 
   // show result modal
   resultModal.innerHTML = "";
