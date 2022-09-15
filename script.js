@@ -21,6 +21,7 @@ fetch("./texts.json")
 
 // checks the user typed character and displays accordingly
 const typeController = (e) => {
+  e.preventDefault()
   const newLetter = e.key;
 
   // Handle backspace press
